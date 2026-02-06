@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 产品资讯日报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .news-list {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .news-item {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item:hover {
+            background: #f5f5f5;
+            transform: translateX(10px);
+        }
+        .news-date {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .news-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.05em;
+            display: block;
+        }
+        .news-link:hover {
+            color: #667eea;
+        }
+        .stats {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .update-time {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI 产品资讯日报</h1>
+        <div class="stats">
+            📊 每日自动更新 | 关注 AI 产品动态 | 无广告纯净阅读
+        </div>
+        <div class="news-list" id="newsList">
+            <p style="text-align: center; color: #999;">正在加载...</p>
+        </div>
+        <div class="update-time" id="updateTime"></div>
+    </div>
+
+    <script>
+        // 自动扫描所有 HTML 文件并生成列表
+        async function loadNewsList() {
+            const newsList = document.getElementById('newsList');
+            const files = [];
+            
+            // 扫描最近 30 天的文件
+            const today = new Date();
+            for (let i = 0; i < 30; i++) {
+                const date = new Date(today);
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                const filename = `ai_product_news_${dateStr}.html`;
+                
+                // 检查文件是否存在
+                try {
+                    const response = await fetch(filename, { method: 'HEAD' });
+                    if (response.ok) {
+                        files.push({
+                            date: dateStr,
+                            filename: filename,
+                            displayDate: date.toLocaleDateString('zh-CN', { 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric',
+                                weekday: 'long'
+                            })
+                        });
+                    }
+                } catch (e) {
+                    // 文件不存在，跳过
+                }
+            }
+            
+            if (files.length === 0) {
+                newsList.innerHTML = '<p style="text-align: center; color: #999;">暂无资讯</p>';
+                return;
+            }
+            
+            // 生成列表
+            newsList.innerHTML = files.map(file => `
+                <div class="news-item">
+                    <div class="news-date">${file.displayDate}</div>
+                    <a href="${file.filename}" class="news-link" target="_blank">
+                        查看当日资讯 →
+                    </a>
+                </div>
+            `).join('');
+            
+            // 更新时间
+            document.getElementById('updateTime').textContent = 
+                `最后更新：${new Date().toLocaleString('zh-CN')}`;
+        }
+        
+        loadNewsList();
+    </script>
+</body>
+</html>

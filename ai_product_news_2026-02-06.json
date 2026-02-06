@@ -1,0 +1,190 @@
+{
+  "OpenAI Blog": [
+    {
+      "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+      "link": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "summary": "An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.",
+      "pub_date": "2026-02-05 11:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing Trusted Access for Cyber",
+      "link": "https://openai.com/index/trusted-access-for-cyber",
+      "summary": "OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.",
+      "pub_date": "2026-02-05 10:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing OpenAI Frontier",
+      "link": "https://openai.com/index/introducing-openai-frontier",
+      "summary": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "pub_date": "2026-02-05 06:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Navigating health questions with ChatGPT",
+      "link": "https://openai.com/index/navigating-health-questions",
+      "summary": "A family shares how ChatGPT helped them prepare for critical cancer treatment decisions for their son alongside expert guidance from his doctors.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "GPT-5.3-Codex System Card",
+      "link": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "summary": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing GPT-5.3-Codex",
+      "link": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Unlocking the Codex harness: how we built the App Server",
+      "link": "https://openai.com/index/unlocking-the-codex-harness",
+      "summary": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
+      "pub_date": "2026-02-04 13:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "VfL Wolfsburg turns ChatGPT into a club-wide capability",
+      "link": "https://openai.com/index/vfl-wolfsburg",
+      "summary": "By focusing on people, not pilots, the Bundesliga club is scaling efficiency, creativity, and knowledge—without losing its football identity.",
+      "pub_date": "2026-02-04 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "The Sora feed philosophy",
+      "link": "https://openai.com/index/sora-feed-philosophy",
+      "summary": "Discover the Sora feed philosophy—built to spark creativity, foster connections, and keep experiences safe with personalized recommendations, parental controls, and strong guardrails.",
+      "pub_date": "2026-02-03 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
+      "link": "https://openai.com/index/snowflake-partnership",
+      "summary": "OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.",
+      "pub_date": "2026-02-02 06:00",
+      "source": "OpenAI Blog"
+    }
+  ],
+  "Hugging Face Blog": [
+    {
+      "title": "Introducing SyGra Studio",
+      "link": "https://huggingface.co/blog/ServiceNow-AI/sygra-studio",
+      "summary": "",
+      "pub_date": "2026-02-05 16:52",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Nemotron ColEmbed V2: Raising the Bar for Multimodal Retrieval with ViDoRe V3’s Top Model",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-colembed-v2",
+      "summary": "",
+      "pub_date": "2026-02-04 15:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Community Evals: Because we're done trusting black-box leaderboards over the community",
+      "link": "https://huggingface.co/blog/community-evals",
+      "summary": "",
+      "pub_date": "2026-02-04 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "H Company's new Holo2 model takes the lead in UI Localization",
+      "link": "https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b",
+      "summary": "",
+      "pub_date": "2026-02-03 17:40",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "The Future of the Global Open-Source AI Ecosystem: From DeepSeek to AI+",
+      "link": "https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3",
+      "summary": "",
+      "pub_date": "2026-02-03 15:03",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Training Design for Text-to-Image Models: Lessons from Ablations",
+      "link": "https://huggingface.co/blog/Photoroom/prx-part2",
+      "summary": "",
+      "pub_date": "2026-02-03 11:25",
+      "source": "Hugging Face Blog"
+    }
+  ],
+  "TechCrunch AI": [
+    {
+      "title": "Sapiom raises $15M to help AI agents buy their own tech tools",
+      "link": "https://techcrunch.com/2026/02/05/sapiom-raises-15m-to-help-ai-agents-buy-their-own-tech-tools/",
+      "summary": "The startup -- with backing from Accel -- is building a financial layer that handles the authentication and micro-payments required for AI agents.",
+      "pub_date": "2026-02-05 23:53",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Reddit looks to AI search as its next big opportunity",
+      "link": "https://techcrunch.com/2026/02/05/reddit-looks-to-ai-search-as-its-next-big-opportunity/",
+      "summary": "During the company's fourth-quarter earnings call on Thursday, it offered an update on its plans to merge traditional and AI search together and hinted that although search is not yet monetized, \"it's an enormous market and opportunity.\"",
+      "pub_date": "2026-02-05 23:20",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "AWS revenue continues to soar as cloud demand remains high",
+      "link": "https://techcrunch.com/2026/02/05/aws-revenue-continues-to-soar-as-cloud-demand-remains-high/",
+      "summary": "AWS recorded its best quarter, in terms of revenue growth, in 13 quarters in Q4 2025 as AI drives AWS adoption.",
+      "pub_date": "2026-02-05 23:11",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Amazon and Google are winning the AI capex race — but what’s the prize?",
+      "link": "https://techcrunch.com/2026/02/05/amazon-and-google-are-winning-the-ai-capex-race-but-whats-the-prize/",
+      "summary": "In 2026, Amazon plans to spend $200 billion in capex. Google is just behind at $175 billion to $185 billion. It's a lot of money!",
+      "pub_date": "2026-02-05 22:43",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "OpenAI launches new agentic coding model only minutes after Anthropic drops its own",
+      "link": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
+      "summary": "The new model is built to accelerate the capabilities of Codex, the agentic coding tool OpenAI launched earlier this week.",
+      "pub_date": "2026-02-05 20:01",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Elon Musk is getting serious about orbital data centers",
+      "link": "https://techcrunch.com/2026/02/05/elon-musk-is-getting-serious-about-orbital-data-centers/",
+      "summary": "We’re starting to see the idea of Musk-owned orbital AI data clusters cohere into an actual plan.",
+      "pub_date": "2026-02-05 18:50",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "OpenAI launches a way for enterprises to build and manage AI agents",
+      "link": "https://techcrunch.com/2026/02/05/openai-launches-a-way-for-enterprises-to-build-and-manage-ai-agents/",
+      "summary": "OpenAI launched Frontier, a new platform designed for enterprises to build and deploy agents while treating them like human employees.",
+      "pub_date": "2026-02-05 18:09",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Anthropic releases Opus 4.6 with new ‘agent teams’",
+      "link": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
+      "summary": "The newest version of Anthropic's model is designed to broaden its capabilities and appeal, allowing for a greater variety of uses and customers.",
+      "pub_date": "2026-02-05 17:51",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Meta tests a stand-alone app for its AI-generated ‘Vibes’ videos",
+      "link": "https://techcrunch.com/2026/02/05/meta-tests-a-standalone-app-for-its-ai-generated-vibes-videos/",
+      "summary": "Launched last September, Vibes lets you create and share short-form AI-generated videos and access a dedicated feed that displays AI videos from others.",
+      "pub_date": "2026-02-05 17:19",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Fundamental raises $255M Series A with a new take on big data analysis",
+      "link": "https://techcrunch.com/2026/02/05/fundamental-raises-255-million-series-a-with-a-new-take-on-big-data-analysis/",
+      "summary": "Fundamental has built a new foundation model to solve an old problem: how to draw insights from the huge quantities of structured data produced by enterprises.",
+      "pub_date": "2026-02-05 15:00",
+      "source": "TechCrunch AI"
+    }
+  ]
+}
