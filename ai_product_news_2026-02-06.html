@@ -6,22 +6,21 @@
     <title>AI Daily - 2026年02月06日</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: #111111;
-            --bg-card-hover: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --text-tertiary: #666666;
-            --accent-primary: #3b82f6;
-            --accent-hover: #60a5fa;
-            --border-color: #222222;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+            --bg-primary: #fdfefb;
+            --bg-secondary: #f5f9f5;
+            --bg-card: #ffffff;
+            --text-primary: #293b1f;
+            --text-secondary: #526c4b;
+            --text-tertiary: #979e8a;
+            --accent-primary: #335030;
+            --accent-light: #4caf50;
+            --border-color: #dce4d8;
+            --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
         }
         
         * {
@@ -31,10 +30,10 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: var(--bg-dark);
+            background: var(--bg-primary);
             padding: 0;
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
@@ -42,65 +41,64 @@
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 80px 40px;
         }
         
         .header {
             text-align: center;
             margin-bottom: 80px;
-            padding: 0 20px;
         }
         
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 16px;
+            margin-bottom: 32px;
         }
         
         .logo-icon {
-            font-size: 2.5em;
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+            font-size: 3em;
+            line-height: 1;
         }
         
         .header h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 400;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+            color: var(--accent-primary);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            text-transform: uppercase;
         }
         
         .header .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: var(--text-secondary);
             margin-bottom: 32px;
             font-weight: 400;
+            letter-spacing: -0.01em;
         }
         
         .header .date {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 24px;
+            padding: 10px 20px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 100px;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            font-size: 0.9375rem;
             color: var(--text-secondary);
-            backdrop-filter: blur(20px);
+            font-weight: 500;
         }
         
         .stats {
             display: flex;
             justify-content: center;
-            gap: 24px;
+            gap: 32px;
             margin-top: 48px;
             flex-wrap: wrap;
         }
@@ -108,51 +106,48 @@
         .stat-item {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 24px 40px;
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 32px 48px;
+            border-radius: 12px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .stat-item:hover {
             transform: translateY(-2px);
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .stat-item .number {
-            font-size: 3rem;
-            font-weight: 800;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            font-weight: 400;
             display: block;
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--accent-light);
             line-height: 1;
             margin-bottom: 8px;
+            letter-spacing: 0.02em;
         }
         
         .stat-item .label {
             font-size: 0.875rem;
             color: var(--text-tertiary);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             font-weight: 600;
         }
         
         .content {
             display: grid;
-            gap: 60px;
+            gap: 72px;
         }
         
         .source-section {
-            animation: fadeIn 0.6s ease-out;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
             to {
                 opacity: 1;
@@ -164,87 +159,70 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             padding-bottom: 16px;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
         
         .source-icon {
-            font-size: 2rem;
-            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+            font-size: 1.75rem;
+            line-height: 1;
         }
         
         .source-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--accent-primary);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
         }
         
         .badge {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: var(--accent-primary);
-            color: white;
+            background: var(--bg-secondary);
+            color: var(--accent-primary);
             padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8125rem;
             font-weight: 700;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.02em;
             margin-left: auto;
         }
         
         .news-grid {
             display: grid;
-            gap: 20px;
+            gap: 16px;
         }
         
         .news-item {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 28px;
-            border-radius: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .news-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 24px;
+            border-radius: 10px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .news-item:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .news-item:hover::before {
-            transform: scaleX(1);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-light);
+            transform: translateY(-1px);
         }
         
         .news-title {
-            font-size: 1.125rem;
+            font-size: 1.0625rem;
             font-weight: 600;
             margin-bottom: 12px;
             line-height: 1.5;
+            letter-spacing: -0.01em;
         }
         
         .news-title a {
             color: var(--text-primary);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: color 0.15s ease;
             display: flex;
             align-items: flex-start;
             gap: 12px;
@@ -252,13 +230,15 @@
         
         .news-title .index {
             color: var(--text-tertiary);
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             font-weight: 700;
-            min-width: 24px;
+            min-width: 28px;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.02em;
         }
         
         .news-title a:hover {
-            color: var(--accent-hover);
+            color: var(--accent-light);
         }
         
         .news-summary {
@@ -271,8 +251,8 @@
         .news-meta {
             display: flex;
             align-items: center;
-            gap: 20px;
-            font-size: 0.875rem;
+            gap: 16px;
+            font-size: 0.8125rem;
             color: var(--text-tertiary);
             flex-wrap: wrap;
         }
@@ -286,24 +266,20 @@
         .news-link {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            color: var(--accent-primary);
+            gap: 4px;
+            color: var(--accent-light);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s ease;
-            padding: 6px 12px;
-            border-radius: 8px;
-            background: rgba(59, 130, 246, 0.1);
+            transition: all 0.15s ease;
         }
         
         .news-link:hover {
-            color: var(--accent-hover);
-            background: rgba(59, 130, 246, 0.2);
-            gap: 10px;
+            gap: 8px;
+            color: var(--accent-primary);
         }
         
         .footer {
-            margin-top: 100px;
+            margin-top: 120px;
             padding: 40px 20px;
             text-align: center;
             border-top: 1px solid var(--border-color);
@@ -318,12 +294,12 @@
         .footer .powered-by {
             margin-top: 20px;
             font-size: 0.8125rem;
-            opacity: 0.6;
+            opacity: 0.7;
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 40px 16px;
+                padding: 48px 20px;
             }
             
             .header {
@@ -331,7 +307,7 @@
             }
             
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .header .subtitle {
@@ -343,11 +319,11 @@
             }
             
             .stat-item {
-                padding: 20px 32px;
+                padding: 24px 36px;
             }
             
             .stat-item .number {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             
             .source-header {
@@ -888,7 +864,7 @@
         
         <div class="footer">
             <p>🤖 AI Daily - Curated by Automated Intelligence</p>
-            <p style="margin-top: 8px;">Generated on 2026-02-06 11:14:48</p>
+            <p style="margin-top: 8px;">Generated on 2026-02-06 11:26:17</p>
             <p class="powered-by">
                 Sources: OpenAI · Anthropic · Google · Microsoft · Product Hunt · Hugging Face<br>
                 TechCrunch · VentureBeat · 机器之心 · 量子位
