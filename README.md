@@ -1,27 +1,27 @@
-# 🤖 AI 产品资讯日报
+# 🤖 AI Daily
 
-每日自动抓取 AI 领域的最新产品动态、技术发布和行业新闻。
+Your daily dose of AI innovation, curated and delivered automatically.
 
-## 📰 数据源
+## 📰 Sources
 
 - OpenAI Blog
-- Anthropic News
+- Anthropic News  
 - Google AI Blog
+- Microsoft AI
 - Product Hunt AI
 - Hugging Face Blog
 - TechCrunch AI
+- VentureBeat AI
+- 机器之心
+- 量子位
 
-## 🔗 访问地址
+## 🔗 Visit
 
-👉 [点击查看最新资讯](https://你的用户名.github.io/ai-news-daily/)
+👉 [https://b1ngsha.github.io/ai-news-daily/](https://b1ngsha.github.io/ai-news-daily/)
 
-## 🤖 自动化
+## 🤖 Automation
 
-本项目通过 GitHub Actions 每日自动更新，无需手动维护。
-
-## 📅 更新频率
-
-每天自动抓取并更新一次。
+Automatically updated daily via cron job.
 
 ---
 

@@ -3,96 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 产品资讯日报</title>
+    <title>AI Daily - Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #111111;
+            --bg-card-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-tertiary: #666666;
+            --accent-primary: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border-color: #222222;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 60px 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        h1 {
-            color: white;
+        .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+        }
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .logo-icon {
             font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
         }
-        .news-list {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
-        .news-item {
-            padding: 20px;
-            border-bottom: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-        }
-        .news-item:hover {
-            background: #f5f5f5;
-            transform: translateX(10px);
-        }
-        .news-date {
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-        .news-link {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.05em;
-            display: block;
-        }
-        .news-link:hover {
-            color: #667eea;
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 400;
         }
         .stats {
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            backdrop-filter: blur(20px);
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 28px;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .news-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        .news-card:hover::before {
+            transform: scaleX(1);
+        }
+        .news-date {
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .news-weekday {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: block;
+            margin-top: 4px;
+        }
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 16px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            transition: all 0.2s ease;
+        }
+        .news-card:hover .read-more {
+            background: rgba(59, 130, 246, 0.2);
+            gap: 10px;
         }
         .update-time {
             text-align: center;
-            color: rgba(255,255,255,0.9);
-            margin-top: 20px;
-            font-size: 0.9em;
+            color: var(--text-tertiary);
+            margin-top: 60px;
+            font-size: 0.875rem;
+        }
+        .loading {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 60px 20px;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            body {
+                padding: 40px 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🤖 AI 产品资讯日报</h1>
-        <div class="stats">
-            📊 每日自动更新 | 关注 AI 产品动态 | 无广告纯净阅读
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+            </div>
+            <h1>AI Daily Archive</h1>
+            <p class="subtitle">Your Complete History of AI Innovation</p>
+            <div class="stats">
+                📚 Daily Updates · Curated Content · Ad-Free
+            </div>
         </div>
-        <div class="news-list" id="newsList">
-            <p style="text-align: center; color: #999;">正在加载...</p>
+        <div class="news-grid" id="newsList">
+            <div class="loading">Loading archive...</div>
         </div>
         <div class="update-time" id="updateTime"></div>
     </div>
 
     <script>
-        // 自动扫描所有 HTML 文件并生成列表
         async function loadNewsList() {
             const newsList = document.getElementById('newsList');
             const files = [];
             
-            // 扫描最近 30 天的文件
             const today = new Date();
             for (let i = 0; i < 30; i++) {
                 const date = new Date(today);
@@ -100,7 +215,6 @@
                 const dateStr = date.toISOString().split('T')[0];
                 const filename = `ai_product_news_${dateStr}.html`;
                 
-                // 检查文件是否存在
                 try {
                     const response = await fetch(filename, { method: 'HEAD' });
                     if (response.ok) {
@@ -110,34 +224,35 @@
                             displayDate: date.toLocaleDateString('zh-CN', { 
                                 year: 'numeric', 
                                 month: 'long', 
-                                day: 'numeric',
+                                day: 'numeric'
+                            }),
+                            weekday: date.toLocaleDateString('zh-CN', { 
                                 weekday: 'long'
                             })
                         });
                     }
-                } catch (e) {
-                    // 文件不存在，跳过
-                }
+                } catch (e) {}
             }
             
             if (files.length === 0) {
-                newsList.innerHTML = '<p style="text-align: center; color: #999;">暂无资讯</p>';
+                newsList.innerHTML = '<div class="loading">No articles found</div>';
                 return;
             }
             
-            // 生成列表
             newsList.innerHTML = files.map(file => `
-                <div class="news-item">
-                    <div class="news-date">${file.displayDate}</div>
-                    <a href="${file.filename}" class="news-link" target="_blank">
-                        查看当日资讯 →
-                    </a>
-                </div>
+                <a href="${file.filename}" class="news-card">
+                    <div class="news-date">
+                        📅 ${file.displayDate}
+                        <span class="news-weekday">${file.weekday}</span>
+                    </div>
+                    <div class="read-more">
+                        Read Today's Update →
+                    </div>
+                </a>
             `).join('');
             
-            // 更新时间
             document.getElementById('updateTime').textContent = 
-                `最后更新：${new Date().toLocaleString('zh-CN')}`;
+                `Last updated: ${new Date().toLocaleString('zh-CN')}`;
         }
         
         loadNewsList();
