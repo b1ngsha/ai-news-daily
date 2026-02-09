@@ -6,19 +6,20 @@
     <title>AI Daily - Archive</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #fdfefb;
-            --bg-secondary: #f5f9f5;
-            --bg-card: #ffffff;
-            --text-primary: #293b1f;
-            --text-secondary: #526c4b;
-            --text-tertiary: #979e8a;
-            --accent-primary: #335030;
-            --accent-light: #4caf50;
-            --border-color: #dce4d8;
-            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+            --bg-dark: #0a0a0a;
+            --bg-card: #111111;
+            --bg-card-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-tertiary: #666666;
+            --accent-primary: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border-color: #222222;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
         }
         * {
             margin: 0;
@@ -26,12 +27,13 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-            background: var(--bg-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-dark);
             color: var(--text-primary);
             min-height: 100vh;
-            padding: 80px 40px;
+            padding: 60px 24px;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .container {
             max-width: 1200px;
@@ -39,126 +41,146 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 16px;
-            margin-bottom: 32px;
+            gap: 12px;
+            margin-bottom: 24px;
         }
         .logo-icon {
-            font-size: 3em;
-            line-height: 1;
+            font-size: 2.5em;
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
         }
         h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 400;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
             margin-bottom: 16px;
-            color: var(--accent-primary);
-            letter-spacing: 0.02em;
-            line-height: 1;
-            text-transform: uppercase;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
         .subtitle {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             color: var(--text-secondary);
             margin-bottom: 32px;
             font-weight: 400;
-            letter-spacing: -0.01em;
         }
         .stats {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 0.9375rem;
+            border-radius: 100px;
+            font-size: 0.95rem;
             color: var(--text-secondary);
-            font-weight: 500;
+            backdrop-filter: blur(20px);
         }
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
             margin-top: 40px;
         }
         .news-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 24px;
-            border-radius: 10px;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 28px;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
             text-decoration: none;
             display: block;
         }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .news-card:hover {
-            box-shadow: var(--shadow-md);
-            border-color: var(--accent-light);
-            transform: translateY(-1px);
+            background: var(--bg-card-hover);
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        .news-card:hover::before {
+            transform: scaleX(1);
         }
         .news-date {
-            color: var(--accent-light);
+            color: var(--accent-primary);
             font-weight: 700;
             font-size: 1.5rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.02em;
         }
         .news-weekday {
-            color: var(--text-tertiary);
+            color: var(--text-secondary);
             font-size: 0.875rem;
             font-weight: 500;
             display: block;
             margin-top: 4px;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0;
         }
         .read-more {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            color: var(--accent-light);
+            gap: 6px;
+            color: var(--accent-primary);
             font-size: 0.875rem;
             font-weight: 600;
             margin-top: 16px;
-            transition: all 0.15s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            transition: all 0.2s ease;
         }
         .news-card:hover .read-more {
-            gap: 8px;
-            color: var(--accent-primary);
+            background: rgba(59, 130, 246, 0.2);
+            gap: 10px;
         }
         .update-time {
             text-align: center;
             color: var(--text-tertiary);
-            margin-top: 80px;
+            margin-top: 60px;
             font-size: 0.875rem;
         }
         .loading {
             text-align: center;
             color: var(--text-secondary);
-            padding: 80px 20px;
-            font-size: 1.125rem;
+            padding: 60px 20px;
+            font-size: 1.1rem;
         }
         @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
             body {
-                padding: 48px 20px;
+                padding: 40px 16px;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             .subtitle {
                 font-size: 1rem;
             }
             .news-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
+                gap: 20px;
             }
         }
     </style>
