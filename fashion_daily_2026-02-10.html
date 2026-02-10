@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>时尚穿搭日报 - 2026年02月10日</title>
+    <title>Fashion Daily - 2026年02月10日</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-primary: #fffbfc;
+            --bg-secondary: #fff5f7;
+            --bg-card: #ffffff;
+            --text-primary: #3d1f2b;
+            --text-secondary: #6b4c5a;
+            --text-tertiary: #9e8a93;
+            --accent-primary: #d43d5c;
+            --accent-light: #f5576c;
+            --accent-lighter: #ff8ba0;
+            --border-color: #f5d9df;
+            --shadow-subtle: 0 1px 2px rgba(212, 61, 92, 0.04);
+            --shadow-sm: 0 2px 4px rgba(212, 61, 92, 0.06);
+            --shadow-md: 0 4px 8px rgba(212, 61, 92, 0.08);
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,163 +31,243 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 80px 40px;
         }
         
         .header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 40px;
             text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .logo-icon {
+            font-size: 3em;
+            line-height: 1;
         }
         
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--accent-primary);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            text-transform: uppercase;
         }
         
         .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        
+        .header .date {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
         
         .stats {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 32px;
+            margin-top: 48px;
             flex-wrap: wrap;
         }
         
         .stat-item {
-            background: rgba(255,255,255,0.2);
-            padding: 15px 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 32px 48px;
+            border-radius: 12px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         
         .stat-item .number {
-            font-size: 2em;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            font-weight: 400;
+            display: block;
+            color: var(--accent-light);
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+        
+        .stat-item .label {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
         }
         
         .content {
-            padding: 40px;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .category-section {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
         
         .category-header {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #f5576c;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
         }
         
-        .category-header h2 {
-            font-size: 1.8em;
-            color: #333;
+        .category-icon {
+            font-size: 1.75rem;
+            line-height: 1;
         }
         
-        .category-header .count {
-            background: #f5576c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
+        .category-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--accent-primary);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            color: var(--accent-primary);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
         
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
         
         .article-card {
-            background: white;
-            border: 1px solid #e1e4e8;
-            border-radius: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-light);
+            transform: translateY(-2px);
         }
         
         .article-image {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f5576c 0%, #ff8ba0 100%);
         }
         
         .article-body {
-            padding: 20px;
+            padding: 24px;
         }
         
         .article-title {
-            font-size: 1.2em;
+            font-size: 1.0625rem;
             font-weight: 600;
-            color: #24292e;
-            margin-bottom: 10px;
-            line-height: 1.4;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
         }
         
         .article-title a {
-            color: #24292e;
+            color: var(--text-primary);
             text-decoration: none;
+            transition: color 0.15s ease;
         }
         
         .article-title a:hover {
-            color: #f5576c;
+            color: var(--accent-light);
         }
         
         .article-meta {
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 0.85em;
-            color: #666;
-            margin-bottom: 10px;
+            gap: 12px;
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
             flex-wrap: wrap;
         }
         
         .article-source {
-            background: #f1f3f5;
-            padding: 3px 10px;
+            background: var(--bg-secondary);
+            padding: 4px 10px;
             border-radius: 5px;
             font-weight: 500;
+            color: var(--text-secondary);
         }
         
         .article-category {
-            color: #f5576c;
-            font-weight: 500;
+            color: var(--accent-light);
+            font-weight: 600;
         }
         
         .article-description {
-            color: #586069;
-            font-size: 0.95em;
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
             line-height: 1.6;
         }
         
@@ -179,27 +278,72 @@
         }
         
         .tag {
-            background: #f1f3f5;
-            color: #666;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
             padding: 4px 10px;
             border-radius: 5px;
-            font-size: 0.8em;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
         
         .footer {
-            background: #f6f8fa;
-            padding: 30px;
+            margin-top: 120px;
+            padding: 40px 20px;
             text-align: center;
-            color: #666;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-tertiary);
+        }
+        
+        .footer p {
+            margin: 8px 0;
+            font-size: 0.875rem;
+        }
+        
+        .footer .powered-by {
+            margin-top: 20px;
+            font-size: 0.8125rem;
+            opacity: 0.7;
         }
         
         @media (max-width: 768px) {
+            .container {
+                padding: 48px 20px;
+            }
+            
+            .header {
+                margin-bottom: 60px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .stats {
+                gap: 16px;
+            }
+            
+            .stat-item {
+                padding: 24px 36px;
+            }
+            
+            .stat-item .number {
+                font-size: 3rem;
+            }
+            
             .articles-grid {
                 grid-template-columns: 1fr;
             }
             
-            .header h1 {
-                font-size: 1.8em;
+            .article-body {
+                padding: 20px;
+            }
+            
+            .article-title {
+                font-size: 1rem;
             }
         }
     </style>
@@ -207,21 +351,25 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>👗 时尚穿搭日报</h1>
-            <div class="subtitle">Fashion & Style Daily Digest</div>
-            <div class="subtitle">2026年02月10日 Tuesday</div>
+            <div class="logo">
+                <span class="logo-icon">👗</span>
+            </div>
+            <h1>Fashion Daily</h1>
+            <p class="subtitle">Your Daily Dose of Style & Trends</p>
+            <div class="date">📅 2026年02月10日</div>
+            
             <div class="stats">
                 <div class="stat-item">
-                    <div class="number">40</div>
-                    <div>篇资讯</div>
+                    <span class="number">20</span>
+                    <span class="label">Articles</span>
                 </div>
                 <div class="stat-item">
-                    <div class="number">4</div>
-                    <div>个分类</div>
+                    <span class="number">3</span>
+                    <span class="label">Categories</span>
                 </div>
                 <div class="stat-item">
-                    <div class="number">5</div>
-                    <div>个数据源</div>
+                    <span class="number">5</span>
+                    <span class="label">Sources</span>
                 </div>
             </div>
         </div>
@@ -230,189 +378,189 @@
 
             <div class="category-section">
                 <div class="category-header">
-                    <span style="font-size: 1.5em;">👔</span>
-                    <h2>每日穿搭</h2>
-                    <span class="count">32 篇</span>
+                    <span class="category-icon">👔</span>
+                    <h2 class="category-title">每日穿搭</h2>
+                    <span class="badge">15</span>
                 </div>
                 <div class="articles-grid">
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMTgxNzgyNjIyNDgwMjQ2/patou.jpg" alt="Must Read: Patou's Artistic Director Exits, CFDA Partners With OpenAI" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/best-body-mists" target="_blank">The 10 Best Body Mists for Women Are Perfect for Layering</a>
+                                <a href="https://fashionista.com/2026/02/patou-artistic-director-guillaume-henry-exits" target="_blank">Must Read: Patou's Artistic Director Exits, CFDA Partners With OpenAI</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">Experts share how body mists offer a playful way to layer and experiment with scents; along with an edit of our favorites from Phlur, Boy Smells, L’Occitane and more.</p>
-                            <div class="article-tags"><span class="tag">#Shopping</span><span class="tag">#Shopping / Beauty</span><span class="tag">#Beauty</span></div>
+                            <p class="article-description">Plus, inside Anna Sui's family business.</p>
+                            <div class="article-tags"><span class="tag">#Latinx</span><span class="tag">#Bad Bunny</span><span class="tag">#Patou</span><span class="tag">#Network</span><span class="tag">#Creative Director</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMDkzMjczMDEwMTg2MTAy/arach-cloz.jpg" alt="8 Elevated Essentials to Get and Gift for Valentine's Day" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/slideshow/vogue-book-club-wuthering-heights-screening-emerald-fennell" target="_blank">Tea, Cake, and Gothic Gossip: Inside the Inaugural Vogue Book Club Rendezvous with Emerald Fennell</a>
+                                <a href="https://fashionista.com/2026/02/arach-and-cloz-elevated-essentials-valentines-day-shop" target="_blank">8 Elevated Essentials to Get and Gift for Valentine's Day</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">Chloe Malle welcomed a crowd—which included Lila Moss, Peter and Trisha Do, Batsheva Hay, Jonathan Cohen, Kate Barton, Kim Shui, Jackson Wiederhoft, Derek Blasberg, Juliana Canfield, Marlo Thomas, Diane Sawyer, and Candice Bergen—for what Sarah McNally called "the best dressed book club in America."</p>
-                            <div class="article-tags"><span class="tag">#Living / Parties</span><span class="tag">#Vogue Parties</span></div>
+                            <p class="article-description">Arach&Cloz proves the holiday can still be comfy and effortless by offering everyday staples with sweet, romantic touches.</p>
+                            <div class="article-tags"><span class="tag">#Shopping</span><span class="tag">#Arach&Cloz</span><span class="tag">#sponsored</span><span class="tag">#Valentine's Day</span><span class="tag">#Sponsored Content</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMDcyMjc5NzQ2OTEzNzI5/salt-and-stone-nima-jalali.jpg" alt="Salt & Stone's Nima Jalali Approaches Brand Collaborations as 'Fun,' Not Business" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/hairline-microblading-thinning-hair" target="_blank">Is Microblading Your Hairline the Fix for Thinning Hair?</a>
+                                <a href="https://fashionista.com/2026/02/nima-jalali-salt-and-stone-interview" target="_blank">Salt & Stone's Nima Jalali Approaches Brand Collaborations as 'Fun,' Not Business</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">The semipermanent tattooing technique promises a fuller, more defined hairline. But what about hair growth and scalp health?</p>
-                            <div class="article-tags"><span class="tag">#Beauty / Hair</span><span class="tag">#Beauty</span><span class="tag">#Beauty / Makeup</span><span class="tag">#Thin Hair</span></div>
+                            <p class="article-description">Watch as the body-care brand's founder and CEO discusses his pro-snowboarding background, opening an NYC store and more, on The Fashionista Network.</p>
+                            <div class="article-tags"><span class="tag">#Fashionista Network</span><span class="tag">#Careers</span><span class="tag">#How To Make It</span><span class="tag">#Beauty Brands</span><span class="tag">#Salt & Stone</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMDg3NjU0OTI0NTI3NDc4/pieter-mulier.jpg" alt="ICYMI: Getting Into NYFW, Pieter Mulier's New Job & Fall 2026 Schedules for Milan and Paris" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/angelina-jolie-naked-dressing-couture-red-carpet" target="_blank">Angelina Jolie Does Naked Dressing Her Way</a>
+                                <a href="https://fashionista.com/2026/02/fashion-news-you-need-to-know-february-7" target="_blank">ICYMI: Getting Into NYFW, Pieter Mulier's New Job & Fall 2026 Schedules for Milan and Paris</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">While she may not be a regular at naked dressing, Angelina Jolie knows that accessorizing is the key to owning any look.</p>
-                            <div class="article-tags"><span class="tag">#Fashion / Trends</span><span class="tag">#Fashion / Celebrity Style</span><span class="tag">#Fashion</span><span class="tag">#Angelina Jolie</span></div>
+                            <p class="article-description">A must-read roundup of our most popular stories of the week.</p>
+                            <div class="article-tags"><span class="tag">#ICYMI</span><span class="tag">#News</span><span class="tag">#Network</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMTEyMDE3MzIxMjA3MjMz/coperni-forgoes-paris-show-over-shareholder-friction.jpg" alt="Must Read: Coperni Skips PFW Amid Business Troubles, Nike Accused of Bias Against White Workers" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/bad-bunny-super-bowl-half-time-performance-sugarcane-bush" target="_blank">Do You Have What It Takes to Be Bad Bunny’s Sugarcane Bush?</a>
+                                <a href="https://fashionista.com/2026/02/coperni-tomorrow-london-problems-pfw" target="_blank">Must Read: Coperni Skips PFW Amid Business Troubles, Nike Accused of Bias Against White Workers</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">Vogue spoke to one of the hundreds of dancers who transformed into sugarcane bush for Bad Bunny’s historic Super Bowl performance.</p>
-                            <div class="article-tags"><span class="tag">#Culture</span><span class="tag">#Beauty / Wellness</span><span class="tag">#Super Bowl</span></div>
+                            <p class="article-description">Plus, Terrence Zhou wins the 2026 AAPI Design and Innovation Grant.</p>
+                            <div class="article-tags"><span class="tag">#awards</span><span class="tag">#jewelry</span><span class="tag">#DEI</span><span class="tag">#Saks Global</span><span class="tag">#AAPI</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMDkxODk0MzI1NjgzNjQ5/club-moda.jpg" alt="Club Moda: A Resortwear Label Inspired by the Caribbean" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/bad-bunny-super-bowl-2026-outfit-halftime-show" target="_blank">The Story Behind Bad Bunny’s 2026 Super Bowl Zara Outfit—Including His “64” Jersey</a>
+                                <a href="https://fashionista.com/2026/02/club-moda-resort-wear-brand" target="_blank">Club Moda: A Resortwear Label Inspired by the Caribbean</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description">A closer look at the Puerto Rican star’s Super Bowl performance outfit—from the custom jersey to the sneakers he designed himself.</p>
-                            <div class="article-tags"><span class="tag">#Fashion / Celebrity Style</span><span class="tag">#Super Bowl</span></div>
+                            <p class="article-description">Founders Jaswinder and Simple Bindra were influenced by what people wore on the islands.</p>
+                            <div class="article-tags"><span class="tag">#Brand Bio Swimwear</span><span class="tag">#Indie Fashion</span><span class="tag">#Resort</span><span class="tag">#Brand Bio</span><span class="tag">#Club Moda</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMDQ3MzEzMzcwNDU3NTM3/casa-noon-beauty-brand-bio.png" alt="Casa Noon Beauty: A Skin-Care Brand Made For 'Sun-Stressed Skin'" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/fashion-shows/tokyo-fall-2026/fetico" target="_blank">Fetico Tokyo Fall 2026</a>
+                                <a href="https://fashionista.com/2026/02/casa-noon-beauty-skin-care-brand" target="_blank">Casa Noon Beauty: A Skin-Care Brand Made For 'Sun-Stressed Skin'</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">🌟 Fashionista</span>
+                                <span class="article-category">潮流趋势</span>
                             </div>
-                            <p class="article-description"></p>
-                            <div class="article-tags"><span class="tag">#Runway</span></div>
+                            <p class="article-description">It just launched this January with an $88 hydrating bio-retinoid serum.</p>
+                            <div class="article-tags"><span class="tag">#Casa Noon Beauty</span><span class="tag">#Beauty</span><span class="tag">#Brand Bio Beauty</span><span class="tag">#Brand Bio</span><span class="tag">#Network</span></div>
                         </div>
                     </div>
 
                     <div class="article-card">
-                        
+                        <img src="https://www.refinery29.com/images/11958681.jpg?width=853&height=1024&fit=bounds&crop=853%3A1024" alt="Bad Bunny’s Super Bowl Halftime Show Was A Reclamation & Reimagination Of America" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.vogue.com/slideshow/its-the-year-of-hollywood-bromances" target="_blank">Goodbye, Toxic Masculinity! Hollywood Bromances Are Thriving</a>
+                                <a href="https://www.refinery29.com/en-us/bad-bunny-super-bowl-halftime-show-reclaims-reimagines-america?utm_source=feed&utm_medium=rss" target="_blank">Bad Bunny’s Super Bowl Halftime Show Was A Reclamation & Reimagination Of America</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
+                                <span class="article-source">💄 Refinery29</span>
+                                <span class="article-category">生活方式</span>
                             </div>
-                            <p class="article-description">Remember when straight men used to be afraid to, like, hug? Now, actors are going full-on lovey-dovey in the public eye.</p>
-                            <div class="article-tags"><span class="tag">#Fashion / Celebrity Style</span></div>
+                            <p class="article-description">When Bad Bunny leaped off the Levi’s Stadium field in Santa Clara, California, ending his 13-minute Super Bowl halftime show chanting the lyrics of “DtMF,” the stadium erupted in fireworks. More than 2,800 miles away in Orlando, Florida, I saw the sky outside my window light up, too, flashing in bri</p>
+                            
                         </div>
                     </div>
 
                     <div class="article-card">
-                        <img src="https://cdn.mos.cms.futurecdn.net/djZ6LksozuzwkHQ5f2mN8L-1280-80.jpg" alt="No Puffer Jacket, No Problem: *This* Is the Amal Clooney Way to Dress for the 2026 Olympics in Milan" class="article-image" onerror="this.style.display='none'">
+                        <img src="https://www.refinery29.com/images/11958198.jpg?width=683&height=1024&fit=bounds&crop=683%3A1024" alt="Venus In Pisces Is Here — & Now Let Your Own Fairytale Unfold" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.whowhatwear.com/fashion/celebrity-style/amal-clooney-omega-house-olympics-event-2026" target="_blank">No Puffer Jacket, No Problem: *This* Is the Amal Clooney Way to Dress for the 2026 Olympics in Milan</a>
+                                <a href="https://www.refinery29.com/en-us/venus-in-pisces-horoscope-february-2026-meaning-effects?utm_source=feed&utm_medium=rss" target="_blank">Venus In Pisces Is Here — & Now Let Your Own Fairytale Unfold</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👔 Who What Wear</span>
-                                <span class="article-category">实用穿搭</span>
+                                <span class="article-source">💄 Refinery29</span>
+                                <span class="article-category">生活方式</span>
                             </div>
-                            <p class="article-description">Elegant.</p>
-                            <div class="article-tags"><span class="tag">#Celebrity Style</span><span class="tag">#Fashion</span><span class="tag">#Celebrity</span></div>
+                            <p class="article-description">In the midst of all the chaos going on in the world, it’s nice to know that Venus in Pisces is bringing us a fairytale vibe. Venus in Pisces, which lasts from February 10th to March 6th 2026, is pulling out all the lovely stops, allowing us to feel confident in ourselves as well as relationships (bo</p>
+                            
                         </div>
                     </div>
 
                     <div class="article-card">
-                        <img src="https://cdn.mos.cms.futurecdn.net/vKot8Xyymhj5E64D7vLiSA-1280-80.jpg" alt="I Know You’re a Fashion Person If You Wear *This* Printed Skirt Trend With Boots" class="article-image" onerror="this.style.display='none'">
+                        <img src="https://www.refinery29.com/images/11958552.png?width=853&height=1024&fit=bounds&crop=853%3A1024" alt="Art Is Political. But What Do We Really Want From Artists In Times Of Crisis?" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.whowhatwear.com/fashion/celebrity-style/polka-dot-bottoms-emma-roberts" target="_blank">I Know You’re a Fashion Person If You Wear *This* Printed Skirt Trend With Boots</a>
+                                <a href="https://www.refinery29.com/en-us/2026/02/11958540/celebrity-political-statements-grammys-super-bowl?utm_source=feed&utm_medium=rss" target="_blank">Art Is Political. But What Do We Really Want From Artists In Times Of Crisis?</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👔 Who What Wear</span>
-                                <span class="article-category">实用穿搭</span>
+                                <span class="article-source">💄 Refinery29</span>
+                                <span class="article-category">生活方式</span>
                             </div>
-                            <p class="article-description">I'm so excited to add this to my closet.</p>
-                            <div class="article-tags"><span class="tag">#Celebrity Style</span><span class="tag">#Fashion</span><span class="tag">#Celebrity</span></div>
+                            <p class="article-description">We know where Nina Simone stood on political and social issues because she told us, vehemently, loudly, and often. She told us in her music with songs like “Mississippi Goddamn” and her cover of “Strange Fruit,” two songs about lynching and the brutalization of Black folks during the civil rights er</p>
+                            
                         </div>
                     </div>
 
                     <div class="article-card">
-                        <img src="https://cdn.mos.cms.futurecdn.net/fmFkY4XkNhBybZ3LnoT8eA-1280-80.jpg" alt="If You Want to Look Like a Model Off Duty, Wear This Classic Shoe Trend With Your Baggy Jeans" class="article-image" onerror="this.style.display='none'">
+                        <img src="https://www.refinery29.com/images/11955795.jpg?width=853&height=1024&fit=bounds&crop=853%3A1024" alt="Your Horoscope This Week: February 8 To 14" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.whowhatwear.com/fashion/celebrity-style/jeans-loafers-outfit-trend-alex-consani" target="_blank">If You Want to Look Like a Model Off Duty, Wear This Classic Shoe Trend With Your Baggy Jeans</a>
+                                <a href="https://www.refinery29.com/en-us/weekly-horoscopes-february-8-to-14-meaning-effects?utm_source=feed&utm_medium=rss" target="_blank">Your Horoscope This Week: February 8 To 14</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👔 Who What Wear</span>
-                                <span class="article-category">实用穿搭</span>
+                                <span class="article-source">💄 Refinery29</span>
+                                <span class="article-category">生活方式</span>
                             </div>
-                            <p class="article-description">Trust me, it's a chic switch.</p>
-                            <div class="article-tags"><span class="tag">#Celebrity Style</span><span class="tag">#Fashion</span><span class="tag">#Celebrity</span></div>
+                            <p class="article-description">Cosmic beings, this week opens with the Last Quarter Moon in Scorpio, a liminal checkpoint between what has already climaxed and what is about to be reborn. Last quarter moons are not about manifesting or initiating, they’re about editing. This one asks us to release what the Leo Full Moon revealed </p>
+                            
                         </div>
                     </div>
 
                     <div class="article-card">
-                        <img src="https://cdn.mos.cms.futurecdn.net/waT9nQaExepnNpdrxtMYaB-1280-80.jpg" alt="Priyanka Ganjoo Is Shifting the Beauty Narrative—Here’s How" class="article-image" onerror="this.style.display='none'">
+                        <img src="https://www.refinery29.com/images/11958436.png?auto=webp&width=780&height=1196&quality=85&crop=15:23" alt="The Best Weekend Sales Across Fashion, Beauty & Lifestyle" class="article-image" onerror="this.style.display='none'">
                         <div class="article-body">
                             <h3 class="article-title">
-                                <a href="https://www.whowhatwear.com/living/career/second-life-podcast-priyanka-ganjoo" target="_blank">Priyanka Ganjoo Is Shifting the Beauty Narrative—Here’s How</a>
+                                <a href="https://www.refinery29.com/en-us/best-weekend-sales-editors-picks?utm_source=feed&utm_medium=rss" target="_blank">The Best Weekend Sales Across Fashion, Beauty & Lifestyle</a>
                             </h3>
                             <div class="article-meta">
-                                <span class="article-source">👔 Who What Wear</span>
-                                <span class="article-category">实用穿搭</span>
+                                <span class="article-source">💄 Refinery29</span>
+                                <span class="article-category">生活方式</span>
                             </div>
-                            <p class="article-description">Hear her story here.</p>
-                            <div class="article-tags"><span class="tag">#Career</span><span class="tag">#Living</span></div>
+                            <p class="article-description">As professional online shoppers, Refinery29 Most Wanted writers have a spidey sense for the best virtual sales and limited-time offers. Whether it's Lululemon's reliable We Made Too Much section or a flash deal on best-selling skin-care brands, where there's a clearance rack, there's an R29 shopping</p>
+                            
                         </div>
                     </div>
 
@@ -421,9 +569,9 @@
 
             <div class="category-section">
                 <div class="category-header">
-                    <span style="font-size: 1.5em;">🌟</span>
-                    <h2>潮流趋势</h2>
-                    <span class="count">3 篇</span>
+                    <span class="category-icon">🌟</span>
+                    <h2 class="category-title">潮流趋势</h2>
+                    <span class="badge">3</span>
                 </div>
                 <div class="articles-grid">
 
@@ -477,67 +625,11 @@
 
             <div class="category-section">
                 <div class="category-header">
-                    <span style="font-size: 1.5em;">🛍️</span>
-                    <h2>单品推荐</h2>
-                    <span class="count">2 篇</span>
+                    <span class="category-icon">⭐</span>
+                    <h2 class="category-title">明星风格</h2>
+                    <span class="badge">2</span>
                 </div>
                 <div class="articles-grid">
-
-                    <div class="article-card">
-                        
-                        <div class="article-body">
-                            <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/best-blush-for-older-women" target="_blank">8 Best Blushes for Mature Skin, According to Celebrity Makeup Artists</a>
-                            </h3>
-                            <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
-                            </div>
-                            <p class="article-description">The best blush for mature skin should melt into skin without settling into fine lines. Shop our favorites, plus pro tips from Gucci Westman on how to apply.</p>
-                            <div class="article-tags"><span class="tag">#Shopping</span><span class="tag">#Shopping / Beauty</span><span class="tag">#Beauty</span><span class="tag">#Beauty / Makeup</span></div>
-                        </div>
-                    </div>
-
-                    <div class="article-card">
-                        
-                        <div class="article-body">
-                            <h3 class="article-title">
-                                <a href="https://www.vogue.com/article/vogue-editors-nyfw-shopping-list" target="_blank">What Vogue Editors Are Shopping to Prepare for NYFW</a>
-                            </h3>
-                            <div class="article-meta">
-                                <span class="article-source">👗 Vogue</span>
-                                <span class="article-category">高端时尚</span>
-                            </div>
-                            <p class="article-description">Discover what Vogue editors are shopping to prepare for NYFW.</p>
-                            <div class="article-tags"><span class="tag">#Shopping</span><span class="tag">#Shopping / Fashion</span></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="category-section">
-                <div class="category-header">
-                    <span style="font-size: 1.5em;">⭐</span>
-                    <h2>明星风格</h2>
-                    <span class="count">3 篇</span>
-                </div>
-                <div class="articles-grid">
-
-                    <div class="article-card">
-                        <img src="https://cdn.mos.cms.futurecdn.net/qijasV5SeyfdjzWD2FAcJg-1280-80.jpg" alt="I'm 99% Sure Lady Gaga Wore This Exact Red Lip to the Super Bowl—It's Already in My Cart for V-Day" class="article-image" onerror="this.style.display='none'">
-                        <div class="article-body">
-                            <h3 class="article-title">
-                                <a href="https://www.whowhatwear.com/beauty/makeup/lady-gaga-lip-super-bowl-2026" target="_blank">I'm 99% Sure Lady Gaga Wore This Exact Red Lip to the Super Bowl—It's Already in My Cart for V-Day</a>
-                            </h3>
-                            <div class="article-meta">
-                                <span class="article-source">👔 Who What Wear</span>
-                                <span class="article-category">实用穿搭</span>
-                            </div>
-                            <p class="article-description">An homage to her symbolic brooch.</p>
-                            <div class="article-tags"><span class="tag">#Makeup</span><span class="tag">#Beauty</span></div>
-                        </div>
-                    </div>
 
                     <div class="article-card">
                         <img src="https://fashionista.com/.image/c_fit%2Ch_800%2Cw_1200/MjIxMTgxNTEwNjk3MzYyODgx/15-percent-pledge-2026-meghan-markle.jpg" alt="The 15 Percent Pledge Gala Red Carpet Was a Celebration of Black Fashion Excellence" class="article-image" onerror="this.style.display='none'">
@@ -575,10 +667,10 @@
         </div>
         
         <div class="footer">
-            <p>💝 每日为你精选全球时尚资讯</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">数据来源: Vogue, Who What Wear, Fashionista, Refinery29, InStyle</p>
-            <p style="margin-top: 10px; font-size: 0.85em; color: #999;">
-                生成时间: 2026-02-10 10:32:49
+            <p>👗 Fashion Daily - Curated Style & Trends</p>
+            <p style="margin-top: 8px;">Generated on 2026-02-10 10:38:23</p>
+            <p class="powered-by">
+                Sources: Vogue • Who What Wear • Fashionista • Refinery29 • InStyle
             </p>
         </div>
     </div>
