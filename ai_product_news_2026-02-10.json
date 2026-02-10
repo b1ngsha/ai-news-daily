@@ -1,0 +1,197 @@
+{
+  "OpenAI Blog": [
+    {
+      "title": "Bringing ChatGPT to GenAI.mil",
+      "link": "https://openai.com/index/bringing-chatgpt-to-genaimil",
+      "summary": "OpenAI for Government announces the deployment of a custom ChatGPT on GenAI.mil, bringing secure, safety-forward AI to U.S. defense teams.",
+      "pub_date": "2026-02-09 11:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Testing ads in ChatGPT",
+      "link": "https://openai.com/index/testing-ads-in-chatgpt",
+      "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+      "pub_date": "2026-02-09 11:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Making AI work for everyone, everywhere: our approach to localization",
+      "link": "https://openai.com/index/our-approach-to-localization",
+      "summary": "OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.",
+      "pub_date": "2026-02-06 10:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+      "link": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "summary": "An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.",
+      "pub_date": "2026-02-05 11:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing Trusted Access for Cyber",
+      "link": "https://openai.com/index/trusted-access-for-cyber",
+      "summary": "OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.",
+      "pub_date": "2026-02-05 10:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing OpenAI Frontier",
+      "link": "https://openai.com/index/introducing-openai-frontier",
+      "summary": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "pub_date": "2026-02-05 06:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Introducing GPT-5.3-Codex",
+      "link": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "GPT-5.3-Codex System Card",
+      "link": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "summary": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Navigating health questions with ChatGPT",
+      "link": "https://openai.com/index/navigating-health-questions",
+      "summary": "A family shares how ChatGPT helped them prepare for critical cancer treatment decisions for their son alongside expert guidance from his doctors.",
+      "pub_date": "2026-02-05 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Unlocking the Codex harness: how we built the App Server",
+      "link": "https://openai.com/index/unlocking-the-codex-harness",
+      "summary": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
+      "pub_date": "2026-02-04 13:00",
+      "source": "OpenAI Blog"
+    }
+  ],
+  "Hugging Face Blog": [
+    {
+      "title": "Transformers.js v4 Preview: Now Available on NPM!",
+      "link": "https://huggingface.co/blog/transformersjs-v4",
+      "summary": "",
+      "pub_date": "2026-02-09 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Introducing SyGra Studio",
+      "link": "https://huggingface.co/blog/ServiceNow-AI/sygra-studio",
+      "summary": "",
+      "pub_date": "2026-02-05 16:52",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Nemotron ColEmbed V2: Raising the Bar for Multimodal Retrieval with ViDoRe V3’s Top Model",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-colembed-v2",
+      "summary": "",
+      "pub_date": "2026-02-04 15:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Community Evals: Because we're done trusting black-box leaderboards over the community",
+      "link": "https://huggingface.co/blog/community-evals",
+      "summary": "",
+      "pub_date": "2026-02-04 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "H Company's new Holo2 model takes the lead in UI Localization",
+      "link": "https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b",
+      "summary": "",
+      "pub_date": "2026-02-03 17:40",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "The Future of the Global Open-Source AI Ecosystem: From DeepSeek to AI+",
+      "link": "https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3",
+      "summary": "",
+      "pub_date": "2026-02-03 15:03",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Training Design for Text-to-Image Models: Lessons from Ablations",
+      "link": "https://huggingface.co/blog/Photoroom/prx-part2",
+      "summary": "",
+      "pub_date": "2026-02-03 11:25",
+      "source": "Hugging Face Blog"
+    }
+  ],
+  "TechCrunch AI": [
+    {
+      "title": "Databricks CEO says SaaS isn’t dead, but AI will soon make it irrelevant",
+      "link": "https://techcrunch.com/2026/02/09/databricks-ceo-says-saas-isnt-dead-but-ai-will-soon-make-it-irrelevant/",
+      "summary": "AI isn't going to replace major SaaS apps with vibe-coded versions, Databricks CEO Ali Ghodsi believes. But it could give rise to competitors.",
+      "pub_date": "2026-02-09 21:14",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Anthropic’s India expansion collides with a local company that already had the name",
+      "link": "https://techcrunch.com/2026/02/09/anthropics-india-expansion-collides-with-a-local-company-that-already-had-the-name/",
+      "summary": "India's Anthropic Software has taken the U.S. AI giant to court over a name dispute.",
+      "pub_date": "2026-02-09 21:01",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "ChatGPT rolls out ads",
+      "link": "https://techcrunch.com/2026/02/09/chatgpt-rolls-out-ads/",
+      "summary": "OpenAI faced a backlash late last year when it tested app suggestions that looked like unwanted ads. Still, the AI company needs to generate revenue from its popular chatbot to cover the costs of developing its technology and growing the business.",
+      "pub_date": "2026-02-09 20:15",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Workday CEO Eschenbach departs, with co-founder Aneel Bhusri returning as CEO",
+      "link": "https://techcrunch.com/2026/02/09/workday-ceo-eschenbach-departs-with-co-founder-aneel-bhusri-returning-as-ceo/",
+      "summary": "Bhusri said in a statement that the company's next chapter would be focused on AI.",
+      "pub_date": "2026-02-09 18:15",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Anthropic closes in on $20B round",
+      "link": "https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/",
+      "summary": "The company raised $13 billion in equity funding just five months ago, but intense competition between frontier labs and the ongoing cost of compute have made them eager to raise as quickly as possible.",
+      "pub_date": "2026-02-09 17:37",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Ex-Googlers are building infrastructure to help companies understand their video data",
+      "link": "https://techcrunch.com/2026/02/09/ex-googlers-are-building-infrastructure-to-help-companies-understand-their-video-data/",
+      "summary": "Founded by former Google Japan leaders, InfiniMind is building enterprise AI to turn vast, unused video archives into searchable, actionable business intelligence.",
+      "pub_date": "2026-02-09 17:00",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Call for speakers: TechCrunch Founder Summit 2026",
+      "link": "https://techcrunch.com/2026/02/09/call-for-speakers-techcrunch-founder-summit-2026/",
+      "summary": "Submit to speak at TechCrunch Founder Summit 2026 to lead a roundtable. Share scaling insights with 1,100 founders on June 23 in Boston.",
+      "pub_date": "2026-02-09 15:00",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Crypto.com places $70M bet on AI.com domain ahead of Super Bowl",
+      "link": "https://techcrunch.com/2026/02/08/crypto-com-places-70m-bet-on-ai-com-domain-ahead-of-super-bowl/",
+      "summary": "The purchase rewrites the domain record books -- not that the crypto industry has ever been accused of restraint when it comes to spending.",
+      "pub_date": "2026-02-08 20:19",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Okay, I’m slightly less mad about that ‘Magnificent Ambersons’ AI project",
+      "link": "https://techcrunch.com/2026/02/08/okay-im-slightly-less-mad-about-that-magnificent-ambersons-ai-project/",
+      "summary": "But this is still a bad idea.",
+      "pub_date": "2026-02-08 19:36",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "From Svedka to Anthropic, brands make bold plays with AI in Super Bowl ads",
+      "link": "https://techcrunch.com/2026/02/08/super-bowl-60-ai-ads-svedka-anthropic-brands-commercials/",
+      "summary": "From the first AI-generated Big Game ad courtesy of Svedka to Anthropic's beef with OpenAI, here are the biggest ads from Super Bowl LX.",
+      "pub_date": "2026-02-08 16:18",
+      "source": "TechCrunch AI"
+    }
+  ]
+}
