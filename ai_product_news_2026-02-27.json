@@ -1,0 +1,155 @@
+{
+  "OpenAI Blog": [
+    {
+      "title": "Pacific Northwest National Laboratory and OpenAI partner to accelerate federal permitting",
+      "link": "https://openai.com/index/pacific-northwest-national-laboratory",
+      "summary": "OpenAI and Pacific Northwest National Laboratory introduce DraftNEPABench, a new benchmark evaluating how AI coding agents can accelerate federal permitting—showing potential to reduce NEPA drafting time by up to 15% and modernize infrastructure reviews.",
+      "pub_date": "2026-02-26 10:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "OpenAI Codex and Figma launch seamless code-to-design experience",
+      "link": "https://openai.com/index/figma-partnership",
+      "summary": "OpenAI and Figma launch a new Codex integration that connects code and design, enabling teams to move between implementation and the Figma canvas to iterate and ship faster.",
+      "pub_date": "2026-02-26 06:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Disrupting malicious uses of AI | February 2026",
+      "link": "https://openai.com/index/disrupting-malicious-ai-uses",
+      "summary": "Our latest threat report examines how malicious actors combine AI models with websites and social platforms—and what it means for detection and defense.",
+      "pub_date": "2026-02-25 00:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Arvind KC appointed Chief People Officer",
+      "link": "https://openai.com/index/arvind-kc-chief-people-officer",
+      "summary": "OpenAI appoints Arvind KC as Chief People Officer to help scale the company, strengthen its culture, and lead how work evolves in the age of AI.",
+      "pub_date": "2026-02-24 13:40",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Why we no longer evaluate SWE-bench Verified",
+      "link": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified",
+      "summary": "SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.",
+      "pub_date": "2026-02-23 11:00",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "OpenAI announces Frontier Alliance Partners",
+      "link": "https://openai.com/index/frontier-alliance-partners",
+      "summary": "OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.",
+      "pub_date": "2026-02-23 05:30",
+      "source": "OpenAI Blog"
+    },
+    {
+      "title": "Our First Proof submissions",
+      "link": "https://openai.com/index/first-proof-submissions",
+      "summary": "We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.",
+      "pub_date": "2026-02-20 14:30",
+      "source": "OpenAI Blog"
+    }
+  ],
+  "Hugging Face Blog": [
+    {
+      "title": "Mixture of Experts (MoEs) in Transformers",
+      "link": "https://huggingface.co/blog/moe-transformers",
+      "summary": "",
+      "pub_date": "2026-02-26 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Deploying Open Source Vision Language Models (VLM) on Jetson",
+      "link": "https://huggingface.co/blog/nvidia/cosmos-on-jetson",
+      "summary": "",
+      "pub_date": "2026-02-24 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "GGML and llama.cpp join HF to ensure the long-term progress of Local AI",
+      "link": "https://huggingface.co/blog/ggml-joins-hf",
+      "summary": "",
+      "pub_date": "2026-02-20 00:00",
+      "source": "Hugging Face Blog"
+    },
+    {
+      "title": "Train AI models with Unsloth and Hugging Face Jobs for FREE",
+      "link": "https://huggingface.co/blog/unsloth-jobs",
+      "summary": "",
+      "pub_date": "2026-02-20 00:00",
+      "source": "Hugging Face Blog"
+    }
+  ],
+  "TechCrunch AI": [
+    {
+      "title": "Jack Dorsey just halved the size of Block’s employee base — and he says your company is next",
+      "link": "https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/",
+      "summary": "Jack Dorsey has long been an open admirer of Elon Musk. Now, it seems, he may have been taking notes.",
+      "pub_date": "2026-02-26 23:43",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Anthropic CEO stands firm as Pentagon deadline looms",
+      "link": "https://techcrunch.com/2026/02/26/anthropic-ceo-stands-firm-as-pentagon-deadline-looms/",
+      "summary": "Anthropic CEO Dario Amodei said Thursday that he \"cannot in good conscience accede\" to the Pentagon's demands to give the military unrestricted access to its AI systems.",
+      "pub_date": "2026-02-26 23:19",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "So, we’re getting Prada Meta AI glasses, right?",
+      "link": "https://techcrunch.com/2026/02/26/so-were-getting-prada-meta-ai-glasses-right/",
+      "summary": "Mark Zuckerberg was at Prada's fashion week event in Milan, leaving everyone to wonder if we're getting Meta AI glasses under the Prada brand.",
+      "pub_date": "2026-02-26 20:11",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Sophia Space raises $10M seed to demo novel space computers",
+      "link": "https://techcrunch.com/2026/02/26/sophia-space-raises-10m-seed-to-demo-novel-space-computers/",
+      "summary": "The company's modular computer tiles offer a new vision for space data centers.",
+      "pub_date": "2026-02-26 19:55",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Mistral AI inks a deal with global consulting giant Accenture",
+      "link": "https://techcrunch.com/2026/02/26/mistral-ai-inks-a-deal-with-global-consulting-giant-accenture/",
+      "summary": "Mistral AI lands a partnership with Accenture, the consultant that has also recently announced partnerships with rivals OpenAI and Anthropic.",
+      "pub_date": "2026-02-26 19:17",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Read AI launches an email-based ‘digital twin’ to help you with schedules and answers",
+      "link": "https://techcrunch.com/2026/02/26/read-ai-launches-an-email-based-digital-twin-to-help-you-with-schedules-and-answers/",
+      "summary": "Read AI is launching Ada, which can reply with your availability and extract answers from the company knowledge base and the web.",
+      "pub_date": "2026-02-26 17:00",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Bumble adds AI-powered photo feedback and profile guidance tools",
+      "link": "https://techcrunch.com/2026/02/26/bumble-adds-ai-powered-photo-feedback-and-profile-guidance-tools/",
+      "summary": "Bumble and other popular dating apps, like Match Group's Tinder and Hinge, have all embraced AI-powered features.",
+      "pub_date": "2026-02-26 16:38",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Google launches Nano Banana 2 model with faster image generation",
+      "link": "https://techcrunch.com/2026/02/26/google-launches-nano-banana-2-model-with-faster-image-generation/",
+      "summary": "Google is making Nano Banana 2 a default model in Gemini app and in AI mode.",
+      "pub_date": "2026-02-26 16:00",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "2 days left: Lock in the best discounts for TechCrunch Disrupt 2026",
+      "link": "https://techcrunch.com/2026/02/26/2-days-left-lock-in-the-best-discounts-for-techcrunch-disrupt-2026/",
+      "summary": "Register now to secure discounts of up to $680 on your TechCrunch Disrupt 2026 pass. Offer ends tomorrow, February 27, at 11:59 p.m. PT.",
+      "pub_date": "2026-02-26 15:00",
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "Exhibit in Boston’s startup ecosystem at TechCrunch Founder Summit 2026",
+      "link": "https://techcrunch.com/2026/02/26/exhibit-in-bostons-startup-ecosystem-at-techcrunch-founder-summit-2026/",
+      "summary": "On June 9, over 1,000 founders, investors, and decision-makers will gather for TechCrunch Founder Summit 2026. This isn’t just foot traffic. It’s a full day of concentrated deal flow.",
+      "pub_date": "2026-02-26 14:00",
+      "source": "TechCrunch AI"
+    }
+  ]
+}

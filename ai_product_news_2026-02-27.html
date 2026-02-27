@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily - 2026年02月27日</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #fdfefb;
+            --bg-secondary: #f5f9f5;
+            --bg-card: #ffffff;
+            --text-primary: #293b1f;
+            --text-secondary: #526c4b;
+            --text-tertiary: #979e8a;
+            --accent-primary: #335030;
+            --accent-light: #4caf50;
+            --border-color: #dce4d8;
+            --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .logo-icon {
+            font-size: 3em;
+            line-height: 1;
+        }
+        
+        .header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--accent-primary);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        
+        .header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        
+        .header .date {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 32px 48px;
+            border-radius: 12px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-item .number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            font-weight: 400;
+            display: block;
+            color: var(--accent-light);
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+        
+        .stat-item .label {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+        
+        .content {
+            display: grid;
+            gap: 72px;
+        }
+        
+        .source-section {
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .source-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .source-icon {
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+        
+        .source-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--accent-primary);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            color: var(--accent-primary);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-left: auto;
+        }
+        
+        .news-grid {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .news-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 10px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .news-item:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-light);
+            transform: translateY(-1px);
+        }
+        
+        .news-title {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+        }
+        
+        .news-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .news-title .index {
+            color: var(--text-tertiary);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            min-width: 28px;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        
+        .news-title a:hover {
+            color: var(--accent-light);
+        }
+        
+        .news-summary {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.7;
+            font-size: 0.9375rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            flex-wrap: wrap;
+        }
+        
+        .news-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.15s ease;
+        }
+        
+        .news-link:hover {
+            gap: 8px;
+            color: var(--accent-primary);
+        }
+        
+        .footer {
+            margin-top: 120px;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-tertiary);
+        }
+        
+        .footer p {
+            margin: 8px 0;
+            font-size: 0.875rem;
+        }
+        
+        .footer .powered-by {
+            margin-top: 20px;
+            font-size: 0.8125rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 48px 20px;
+            }
+            
+            .header {
+                margin-bottom: 60px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .stats {
+                gap: 16px;
+            }
+            
+            .stat-item {
+                padding: 24px 36px;
+            }
+            
+            .stat-item .number {
+                font-size: 3rem;
+            }
+            
+            .source-header {
+                flex-wrap: wrap;
+            }
+            
+            .badge {
+                margin-left: 0;
+            }
+            
+            .news-item {
+                padding: 20px;
+            }
+            
+            .news-title {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+            </div>
+            <h1>AI Daily</h1>
+            <p class="subtitle">Your Daily Dose of AI Innovation</p>
+            <div class="date">📅 2026年02月27日</div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="number">21</span>
+                    <span class="label">Articles</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">3</span>
+                    <span class="label">Sources</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+
+            <div class="source-section">
+                <div class="source-header">
+                    <span class="source-icon">🤖</span>
+                    <h2 class="source-title">OpenAI Blog</h2>
+                    <span class="badge">7</span>
+                </div>
+                
+                <div class="news-grid">
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/pacific-northwest-national-laboratory" target="_blank" rel="noopener noreferrer">
+                                <span class="index">01</span>
+                                <span>Pacific Northwest National Laboratory and OpenAI partner to accelerate federal permitting</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">OpenAI and Pacific Northwest National Laboratory introduce DraftNEPABench, a new benchmark evaluating how AI coding agents can accelerate federal permitting—showing potential to reduce NEPA drafting time by up to 15% and modernize infrastructure reviews.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 10:00</span>
+                            <a href="https://openai.com/index/pacific-northwest-national-laboratory" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/figma-partnership" target="_blank" rel="noopener noreferrer">
+                                <span class="index">02</span>
+                                <span>OpenAI Codex and Figma launch seamless code-to-design experience</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">OpenAI and Figma launch a new Codex integration that connects code and design, enabling teams to move between implementation and the Figma canvas to iterate and ship faster.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 06:00</span>
+                            <a href="https://openai.com/index/figma-partnership" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/disrupting-malicious-ai-uses" target="_blank" rel="noopener noreferrer">
+                                <span class="index">03</span>
+                                <span>Disrupting malicious uses of AI | February 2026</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Our latest threat report examines how malicious actors combine AI models with websites and social platforms—and what it means for detection and defense.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-25 00:00</span>
+                            <a href="https://openai.com/index/disrupting-malicious-ai-uses" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/arvind-kc-chief-people-officer" target="_blank" rel="noopener noreferrer">
+                                <span class="index">04</span>
+                                <span>Arvind KC appointed Chief People Officer</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">OpenAI appoints Arvind KC as Chief People Officer to help scale the company, strengthen its culture, and lead how work evolves in the age of AI.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-24 13:40</span>
+                            <a href="https://openai.com/index/arvind-kc-chief-people-officer" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified" target="_blank" rel="noopener noreferrer">
+                                <span class="index">05</span>
+                                <span>Why we no longer evaluate SWE-bench Verified</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-23 11:00</span>
+                            <a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/frontier-alliance-partners" target="_blank" rel="noopener noreferrer">
+                                <span class="index">06</span>
+                                <span>OpenAI announces Frontier Alliance Partners</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-23 05:30</span>
+                            <a href="https://openai.com/index/frontier-alliance-partners" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://openai.com/index/first-proof-submissions" target="_blank" rel="noopener noreferrer">
+                                <span class="index">07</span>
+                                <span>Our First Proof submissions</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-20 14:30</span>
+                            <a href="https://openai.com/index/first-proof-submissions" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="source-section">
+                <div class="source-header">
+                    <span class="source-icon">🤗</span>
+                    <h2 class="source-title">Hugging Face Blog</h2>
+                    <span class="badge">4</span>
+                </div>
+                
+                <div class="news-grid">
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://huggingface.co/blog/moe-transformers" target="_blank" rel="noopener noreferrer">
+                                <span class="index">01</span>
+                                <span>Mixture of Experts (MoEs) in Transformers</span>
+                            </a>
+                        </div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 00:00</span>
+                            <a href="https://huggingface.co/blog/moe-transformers" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://huggingface.co/blog/nvidia/cosmos-on-jetson" target="_blank" rel="noopener noreferrer">
+                                <span class="index">02</span>
+                                <span>Deploying Open Source Vision Language Models (VLM) on Jetson</span>
+                            </a>
+                        </div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-24 00:00</span>
+                            <a href="https://huggingface.co/blog/nvidia/cosmos-on-jetson" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://huggingface.co/blog/ggml-joins-hf" target="_blank" rel="noopener noreferrer">
+                                <span class="index">03</span>
+                                <span>GGML and llama.cpp join HF to ensure the long-term progress of Local AI</span>
+                            </a>
+                        </div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-20 00:00</span>
+                            <a href="https://huggingface.co/blog/ggml-joins-hf" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://huggingface.co/blog/unsloth-jobs" target="_blank" rel="noopener noreferrer">
+                                <span class="index">04</span>
+                                <span>Train AI models with Unsloth and Hugging Face Jobs for FREE</span>
+                            </a>
+                        </div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-20 00:00</span>
+                            <a href="https://huggingface.co/blog/unsloth-jobs" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="source-section">
+                <div class="source-header">
+                    <span class="source-icon">📰</span>
+                    <h2 class="source-title">TechCrunch AI</h2>
+                    <span class="badge">10</span>
+                </div>
+                
+                <div class="news-grid">
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">01</span>
+                                <span>Jack Dorsey just halved the size of Block’s employee base — and he says your company is next</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Jack Dorsey has long been an open admirer of Elon Musk. Now, it seems, he may have been taking notes.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 23:43</span>
+                            <a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/anthropic-ceo-stands-firm-as-pentagon-deadline-looms/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">02</span>
+                                <span>Anthropic CEO stands firm as Pentagon deadline looms</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Anthropic CEO Dario Amodei said Thursday that he "cannot in good conscience accede" to the Pentagon's demands to give the military unrestricted access to its AI systems.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 23:19</span>
+                            <a href="https://techcrunch.com/2026/02/26/anthropic-ceo-stands-firm-as-pentagon-deadline-looms/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/so-were-getting-prada-meta-ai-glasses-right/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">03</span>
+                                <span>So, we’re getting Prada Meta AI glasses, right?</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Mark Zuckerberg was at Prada's fashion week event in Milan, leaving everyone to wonder if we're getting Meta AI glasses under the Prada brand.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 20:11</span>
+                            <a href="https://techcrunch.com/2026/02/26/so-were-getting-prada-meta-ai-glasses-right/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/sophia-space-raises-10m-seed-to-demo-novel-space-computers/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">04</span>
+                                <span>Sophia Space raises $10M seed to demo novel space computers</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">The company's modular computer tiles offer a new vision for space data centers.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 19:55</span>
+                            <a href="https://techcrunch.com/2026/02/26/sophia-space-raises-10m-seed-to-demo-novel-space-computers/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/mistral-ai-inks-a-deal-with-global-consulting-giant-accenture/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">05</span>
+                                <span>Mistral AI inks a deal with global consulting giant Accenture</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Mistral AI lands a partnership with Accenture, the consultant that has also recently announced partnerships with rivals OpenAI and Anthropic.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 19:17</span>
+                            <a href="https://techcrunch.com/2026/02/26/mistral-ai-inks-a-deal-with-global-consulting-giant-accenture/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/read-ai-launches-an-email-based-digital-twin-to-help-you-with-schedules-and-answers/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">06</span>
+                                <span>Read AI launches an email-based ‘digital twin’ to help you with schedules and answers</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Read AI is launching Ada, which can reply with your availability and extract answers from the company knowledge base and the web.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 17:00</span>
+                            <a href="https://techcrunch.com/2026/02/26/read-ai-launches-an-email-based-digital-twin-to-help-you-with-schedules-and-answers/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/bumble-adds-ai-powered-photo-feedback-and-profile-guidance-tools/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">07</span>
+                                <span>Bumble adds AI-powered photo feedback and profile guidance tools</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Bumble and other popular dating apps, like Match Group's Tinder and Hinge, have all embraced AI-powered features.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 16:38</span>
+                            <a href="https://techcrunch.com/2026/02/26/bumble-adds-ai-powered-photo-feedback-and-profile-guidance-tools/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/google-launches-nano-banana-2-model-with-faster-image-generation/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">08</span>
+                                <span>Google launches Nano Banana 2 model with faster image generation</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Google is making Nano Banana 2 a default model in Gemini app and in AI mode.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 16:00</span>
+                            <a href="https://techcrunch.com/2026/02/26/google-launches-nano-banana-2-model-with-faster-image-generation/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/2-days-left-lock-in-the-best-discounts-for-techcrunch-disrupt-2026/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">09</span>
+                                <span>2 days left: Lock in the best discounts for TechCrunch Disrupt 2026</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">Register now to secure discounts of up to $680 on your TechCrunch Disrupt 2026 pass. Offer ends tomorrow, February 27, at 11:59 p.m. PT.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 15:00</span>
+                            <a href="https://techcrunch.com/2026/02/26/2-days-left-lock-in-the-best-discounts-for-techcrunch-disrupt-2026/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">
+                            <a href="https://techcrunch.com/2026/02/26/exhibit-in-bostons-startup-ecosystem-at-techcrunch-founder-summit-2026/" target="_blank" rel="noopener noreferrer">
+                                <span class="index">10</span>
+                                <span>Exhibit in Boston’s startup ecosystem at TechCrunch Founder Summit 2026</span>
+                            </a>
+                        </div>
+
+                        <div class="news-summary">On June 9, over 1,000 founders, investors, and decision-makers will gather for TechCrunch Founder Summit 2026. This isn’t just foot traffic. It’s a full day of concentrated deal flow.</div>
+
+                        <div class="news-meta">
+                            <span>📅 2026-02-26 14:00</span>
+                            <a href="https://techcrunch.com/2026/02/26/exhibit-in-bostons-startup-ecosystem-at-techcrunch-founder-summit-2026/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <p>🤖 AI Daily - Curated by Automated Intelligence</p>
+            <p style="margin-top: 8px;">Generated on 2026-02-27 16:15:30</p>
+            <p class="powered-by">
+                Sources: OpenAI · Anthropic · Google · Microsoft · Product Hunt · Hugging Face<br>
+                TechCrunch · VentureBeat · 机器之心 · 量子位
+            </p>
+        </div>
+    </div>
+</body>
+</html>
